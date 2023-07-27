@@ -1,18 +1,16 @@
 import React from "react";
 
-function Search({ searchText, setSearchText }) {
+export function Search({ onQueryChange }) {
+
   return (
-    <section className="layout-row justify-content-center mb-40">
+    <section className='layout-row justify-content-center mb-40'>
       <input
-        type="text"
-        placeholder="Search for movie by name"
-        className="w-75 py-2"
-        data-testid="search"
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
+        type='text'
+        placeholder='Search for movie by name'
+        className='w-75 py-2'
+        data-testid='search'
+        onChange={onQueryChange}
       />
     </section>
-  );
+  )
 }
-
-export default Search;
